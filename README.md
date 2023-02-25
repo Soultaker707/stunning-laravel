@@ -1,64 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Read Me file - All commands used during different checkpoints
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Checkpoint1: 1- No command here. 2- sudo: sudo stands for "superuser do" and is used to execute commands with elevated privileges . It allows them to use commands that only have access by the root user.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+apt-get: It is used to install, upgrade, and remove software packages, as well as manage dependencies between packages. The apt-get command downloads packages from software repositories and installs them on your machine. 3- No command 4- sudo agpt-get install apache2 mysql-server php-mysql php libapach2-mod-php php-pear curl php-curl php-cli git (during the recording i used sudo apt-get every line, after i finished i rememberd that i can download them in one line) 5- sudo a2enmod rewrite 6- sudo systemctl restart apache2
 
-## Learning Laravel
+Checkpoint2: 1- cd ../../var/www/html 2- pwd 3- sudo git clone https://github.com/Soultaker707/stunning-laravel.git
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Checkpoint3: 1- sudo curl -sS https://getcomposer.org/installer -o composer-setup.php | sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer (used double dash "--" instead of 1 big dash like in the file)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2- sudo composer install
 
-## Laravel Sponsors
+Checkpoint4: 1- pwd 2- cp .env.example .env 3-4- vim .env.example (inside vim use :i to edit, :w to write and :x to exit) 5- php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Checkpoint5:
 
-### Premium Partners
+1- apache2 -v 2- cd /etc/apache2 3- ls 4- used vim (same steps as before) 5- cd sites-enabled 6- used vim as before 7- sudo systemctl restart apache2
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Checkpoint6: 1- cd ../../../var/www/html/stunning-laravel
 
-## Contributing
+2- “sudo chgrp -R www-data storage bootstrap/cache” sudo: explained before
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+chgrp: This is a command to change the group ownership of a file or directory. -R option to recursively change the group ownership of all files and directories in the storage and bootstrap/cache directories. www-data: This is the name of the group to which the ownership is being changed. storage bootstrap/cache: These are the directories whose group ownership is being changed.
 
-## Code of Conduct
+3- “sudo chmod -R ug+rwx storage bootstrap/cache" sudo: ... chmod: This is a command to change the file mode or permission of a file or directory (read, write, execute). -R option to recursively change the permission of all files and directories in the storage and bootstrap/cache directories. ug+rwx: This is the permission mode being assigned to the directories. u stands for "user," g stands for "group," and rwx stands for "read, write, and execute." storage bootstrap/cache: These are the directories whose permission is being changed. T
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+ipAddress: 34.255.29.166
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
